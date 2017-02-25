@@ -1,6 +1,10 @@
 var express = require('express')
 var app = express()
 
+
+app.get ('/', function(req, res) {
+  res.send("<h1>Header Info Parser</h1>")
+})
 app.get('/whoami', function (req, res) {
   var ip = req.connection.remoteAddress;
   var lang = req.headers["accept-language"];
